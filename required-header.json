@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/lowcarbontrade/fix-reference/required-header.json",
+  "$id": "https://github.com/lowcarbontrade/fix-reference/main/required-header.json",
  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "type": "object",
   "properties": {
