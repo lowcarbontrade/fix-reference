@@ -1,0 +1,29 @@
+{
+  "$id": "https://github.com/lowcarbontrade/fix-reference/required-header.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "type": "object",
+  "properties": {
+    "BeginString": {
+      "type": "string"
+    },
+    "BodyLength": {
+      "type": "integer"
+    },
+    "MsgType": {
+      "type": "string"
+    },
+    "SenderCompID": {
+      "type": "string"
+    },
+    "TargetCompID": {
+      "type": "string"
+    },
+    "MsgSeqNum": {
+      "type": "integer"
+    },
+    "SendingTime": {
+      "type": "string"
+    }
+  },
+  "required": ["BeginString", "BodyLength", "MsgType", "SenderCompID", "TargetCompID", "MsgSeqNum", "SendingTime"]
+}
