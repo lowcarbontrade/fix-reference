@@ -1,0 +1,11 @@
+{
+  "$id": "https://github.com/lowcarbontrade/fix-reference/main/trailer.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "type": "object",
+  "properties": {
+    "CheckSum": {
+      "type": "string",
+      "description": "Three byte, simple checksum"
+    }
+  }
+}

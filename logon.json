@@ -1,0 +1,25 @@
+{
+  "$id": "https://github.com/lowcarbontrade/fix-reference/main/logon.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "type": "object",
+  "properties": {
+    "Header": {
+      "$ref": "https://github.com/lowcarbontrade/fix-reference/main/header.json"
+    },
+    "Body": {
+      "type": "object",
+      "properties": {
+        "EncryptMethod": {
+          "type": "integer"
+        },
+        "HeartBtInt": {
+          "type": "integer"
+        }
+      },
+      "required": ["EncryptMethod", "HeartBtInt"]
+    },
+    "Trailer": {
+      "$ref": "https://github.com/lowcarbontrade/fix-reference/main/trailer.json"    }
+  },
+  "required": ["Header", "Body", "Trailer"]
+}
