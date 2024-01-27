@@ -33,7 +33,7 @@
     "SendingTime": {
       "type": "string",
       "description": "Time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as \"GMT\")",
-      "pattern": "\\b[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z\\b"
+      "pattern": "\\b[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{6}Z\\b"
     }
   },
   "required": ["BeginString", "BodyLength", "MsgType", "SenderCompID", "TargetCompID", "MsgSeqNum", "SendingTime"],
