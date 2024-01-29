@@ -9,7 +9,7 @@
       "description": "FIX version"
     },
     "BodyLength": {
-      "type": "integer",
+      "type": "number",
       "minimum": 0,
       "maximum": 99999999,
       "description": "Length of message body in bytes"
@@ -26,7 +26,7 @@
       "description": "Target ID"
     },
     "MsgSeqNum": {
-      "type": "integer",
+      "type": "number",
       "minimum": 1,
       "description": "Message sequence number"
     },
