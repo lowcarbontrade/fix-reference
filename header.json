@@ -17,7 +17,8 @@
     "MsgType": {
       "type": "string",
       "enum": [
-        "A"
+        "A",
+        "D"
       ]
     },
     "SenderCompID": {
