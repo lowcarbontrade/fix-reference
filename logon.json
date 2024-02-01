@@ -12,7 +12,7 @@
         "EncryptMethod": {
           "type": "integer",
           "description": "0=NONE / 1=PKCS / 2=DES / 3=PKCSDES / 4=PGPDES / 5=PGPDESMD5 / 6=PEM / 7=NONE",
-          "enum": [0, 1, 2, 3, 4, 5, 6, 7]
+          "enum": [0, 7]
         },
         "HeartBtInt": {
           "type": "integer",
