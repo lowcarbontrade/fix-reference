@@ -1,5 +1,5 @@
 {
-    "$id": "https://github.com/lowcarbontrade/fix-reference/main/orders/singleOrder.json",
+    "$id": "https://github.com/lowcarbontrade/fix-reference/main/singleOrder.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "type": "object",
     "properties": {
