@@ -1,0 +1,46 @@
+{
+    "$id": "https://github.com/lowcarbontrade/fix-reference/main/orders/cancel_order.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
+    "type": "object",
+    "properties": {
+      "Header": {
+        "$ref": "https://github.com/lowcarbontrade/fix-reference/main/header.json"
+      },
+      "Body": {
+        "type": "object",
+        "properties": {
+            "OrigClOrdID": {
+                "type": "string",
+                "description": "Original unique identifier for Order as assigned by institution"
+            },
+            "ClOrdID": {
+                "type": "string",
+                "description": "Unique ID of cancel request as assigned by the institution"
+            },
+            "Symbol": {
+                "type": "string",
+                "description": "Ticker symbol",
+                "enum": ["AAA", "BBB", "CCC", "DDD", "EEE"]
+            },
+            "Side": {
+                "type": "string",
+                "description": "Side of order (1 = buy, 2 = sell)",
+                "enum": ["1", "2"]
+            },
+            "OrderQty": {
+                "type": "integer",
+                "description": "Number of shares ordered"
+            },
+            "TransactTime": {
+                "type": "string",
+                "description": "Time of execution/order creation (always expressed in UTC (Universal Time Coordinated, also known as \"GMT\")",
+                "pattern": "\\b[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{6}Z\\b"
+            }
+        },
+        "required": ["OrigClOrdID", "ClOrdID", "Symbol", "Side", "OrderQty", "TransactTime"]
+      },
+      "Trailer": {
+        "$ref": "https://github.com/lowcarbontrade/fix-reference/main/trailer.json"    }
+    },
+    "required": ["Header", "Body", "Trailer"]
+  }

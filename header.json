@@ -18,7 +18,8 @@
       "type": "string",
       "enum": [
         "A",
-        "D"
+        "D",
+        "F"
       ]
     },
     "SenderCompID": {
