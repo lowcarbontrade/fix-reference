@@ -22,7 +22,13 @@ The logon message is used to establish a connection between two parties and exch
 
 ### Trade Messages
 
-> Soon to be added
+#### New Order - Single (35=D)
+
+The new order - single message type is used by institutions wishing to electronically submit securities and forex orders to a broker for execution. The message type is also used to cancel, replace, or restate orders. The new order message type is the basic message for submitting orders into the system.
+
+#### Order Cancel Request (35=F)
+
+The order cancel request message type is used by institutions wishing to cancel previously submitted orders. There is no order cancel replace request message type. To change the parameters of an order, the order must be cancelled and a new order must be entered.
 
 ### Post-Trade Messages
 
