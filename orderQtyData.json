@@ -1,0 +1,14 @@
+{
+    "$id": "https://github.com/lowcarbontrade/fix-reference/main/orderQtyData.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
+    "type": "object",
+    "properties": {
+        "OrderQty": {
+            "type": "integer",
+            "description": "Number of shares ordered"
+        }
+    },
+    "required": [
+        "OrderQty"
+    ]
+}

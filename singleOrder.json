@@ -1,0 +1,86 @@
+{
+  "$id": "https://github.com/lowcarbontrade/fix-reference/main/singleOrder.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "type": "object",
+  "properties": {
+    "Header": {
+      "$ref": "https://github.com/lowcarbontrade/fix-reference/main/header.json"
+    },
+    "Body": {
+      "type": "object",
+      "properties": {
+        "ClOrdID": {
+          "type": "string",
+          "description": "Unique identifier for Order as assigned by institution"
+        },
+        "HandlInst": {
+          "type": "string",
+          "description": "Instructions for order handling on Broker trading floor (2 = Automated execution order, public, Broker intervention OK)",
+          "enum": [
+            "2"
+          ]
+        },
+        "Instrument": {
+          "$ref": "https://github.com/lowcarbontrade/fix-reference/main/instrument.json"
+        },
+        "Side": {
+          "type": "string",
+          "description": "Side of order (1 = buy, 2 = sell)",
+          "enum": [
+            "1",
+            "2"
+          ]
+        },
+        "OrderQtyData": {
+          "$ref": "https://github.com/lowcarbontrade/fix-reference/main/orderQtyData.json"
+        },
+        "OrdType": {
+          "type": "string",
+          "description": "Order Type (1 = market, 2 = limit)",
+          "enum": [
+            "1",
+            "2"
+          ]
+        },
+        "Price": {
+          "type": "number",
+          "description": "Price of a limit order"
+        },
+        "TimeInForce": {
+          "type": "string",
+          "description": "Time in force (0 = day, 1 = GTC, 2 = OPG, 3 = IOC, 4 = FOK)",
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "default": "0"
+        },
+        "TransactTime": {
+          "type": "string",
+          "description": "Time of execution/order creation (always expressed in UTC (Universal Time Coordinated, also known as \"GMT\")",
+          "pattern": "\\b[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{6}Z\\b"
+        }
+      },
+      "required": [
+        "ClOrdID",
+        "HandlInst",
+        "Instrument",
+        "Side",
+        "OrderQtyData",
+        "OrdType",
+        "TransactTime"
+      ]
+    },
+    "Trailer": {
+      "$ref": "https://github.com/lowcarbontrade/fix-reference/main/trailer.json"
+    }
+  },
+  "required": [
+    "Header",
+    "Body",
+    "Trailer"
+  ]
+}
