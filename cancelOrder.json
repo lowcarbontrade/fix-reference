@@ -1,10 +1,10 @@
 {
-    "$id": "https://github.com/lowcarbontrade/fix-reference/main/cancelOrder.json",
+    "$id": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/cancelOrder.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "type": "object",
     "properties": {
         "Header": {
-            "$ref": "https://github.com/lowcarbontrade/fix-reference/main/header.json"
+            "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/header.json"
         },
         "Body": {
             "type": "object",
@@ -18,7 +18,7 @@
                     "description": "Unique ID of cancel request as assigned by the institution"
                 },
                 "Instrument": {
-                    "$ref": "https://github.com/lowcarbontrade/fix-reference/main/instrument.json"
+                    "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/instrument.json"
                 },
                 "Side": {
                     "type": "string",
@@ -29,7 +29,7 @@
                     ]
                 },
                 "OrderQtyData": {
-                    "$ref": "https://github.com/lowcarbontrade/fix-reference/main/orderQtyData.json"
+                    "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/orderQtyData.json"
                 },
                 "TransactTime": {
                     "type": "string",
@@ -47,7 +47,7 @@
             ]
         },
         "Trailer": {
-            "$ref": "https://github.com/lowcarbontrade/fix-reference/main/trailer.json"
+            "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/trailer.json"
         }
     },
     "required": [

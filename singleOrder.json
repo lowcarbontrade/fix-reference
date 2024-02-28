@@ -1,10 +1,10 @@
 {
-  "$id": "https://github.com/lowcarbontrade/fix-reference/main/singleOrder.json",
+  "$id": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/singleOrder.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "type": "object",
   "properties": {
     "Header": {
-      "$ref": "https://github.com/lowcarbontrade/fix-reference/main/header.json"
+      "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/header.json"
     },
     "Body": {
       "type": "object",
@@ -21,7 +21,7 @@
           ]
         },
         "Instrument": {
-          "$ref": "https://github.com/lowcarbontrade/fix-reference/main/instrument.json"
+          "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/instrument.json"
         },
         "Side": {
           "type": "string",
@@ -32,7 +32,7 @@
           ]
         },
         "OrderQtyData": {
-          "$ref": "https://github.com/lowcarbontrade/fix-reference/main/orderQtyData.json"
+          "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/orderQtyData.json"
         },
         "OrdType": {
           "type": "string",
@@ -49,15 +49,11 @@
         },
         "TimeInForce": {
           "type": "string",
-          "description": "Time in force (0 = day, 1 = GTC, 2 = OPG, 3 = IOC, 4 = FOK)",
+          "description": "Time in force (1 = GTC)",
           "enum": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
+            "1"
           ],
-          "default": "0"
+          "default": "1"
         },
         "TransactTime": {
           "type": "string",
@@ -76,7 +72,7 @@
       ]
     },
     "Trailer": {
-      "$ref": "https://github.com/lowcarbontrade/fix-reference/main/trailer.json"
+      "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/trailer.json"
     }
   },
   "required": [
