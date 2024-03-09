@@ -69,62 +69,6 @@
         "OrderQtyData",
         "OrdType",
         "TransactTime"
-      ],
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "OrdType": {
-                "const": "1"
-              },
-              "Side": {
-                "const": "1"
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "OrderQtyData": {
-                "properties": {
-                  "CashOrderQty": {
-                    "type": "integer"
-                  }
-                },
-                "required": [
-                  "CashOrderQty"
-                ]
-              }
-            }
-          },
-          "else": {
-            "properties": {
-              "OrderQtyData": {
-                "properties": {
-                  "OrderQty": {
-                    "type": "integer"
-                  }
-                },
-                "required": [
-                  "OrderQty"
-                ]
-              }
-            }
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "OrdType": {
-                "const": "2"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "Price"
-            ]
-          }
-        }
       ]
     },
     "Trailer": {
