@@ -7,11 +7,10 @@
       "type": "string",
       "description": "Ticker symbol",
       "enum": [
-        "AAA",
-        "BBB",
-        "CCC",
-        "DDD",
-        "EEE"
+        "AAA/EUR",
+        "BBB/EUR",
+        "CCC/EUR",
+        "DDD/EUR"
       ]
     }
   },
