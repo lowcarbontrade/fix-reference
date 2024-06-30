@@ -1,0 +1,84 @@
+{
+  "$id": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/marketDataRequest.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "type": "object",
+  "properties": {
+    "Header": {
+      "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/header.json"
+    },
+    "Body": {
+      "type": "object",
+      "properties": {
+        "MDReqID": {
+          "type": "string",
+          "description": "Unique identifier for Market Data Request as assigned by institution"
+        },
+        "SubscriptionRequestType": {
+          "type": "string",
+          "description": "Type of Market Data Request (0 = Snapshot, 1 = Snapshot + Updates/Subscribe, 2 = Unsubscribe)",
+          "enum": [
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "MarketDepth": {
+          "type": "number",
+          "description": "Number of entries desired for Market Depth",
+          "minimum": 0
+        },
+        "NoMDEntryTypes": {
+          "type": "array",
+          "description": "Number of entries desired for Market Depth",
+          "items": {
+            "type": "object",
+            "properties": {
+              "MDEntryType": {
+                "type": "string",
+                "description": "Type of Market Data entry (0 = Bid, 1 = Offer, 2 = Trade, 3 = Index Value, 4 = Opening Price, 5 = Closing Price, 6 = Settlement Price, 7 = Trading Session High Price, 8 = Trading Session Low Price, 9 = Trading Session VWAP Price, A = Imbalance, B = Trade Volume, C = Open Interest)",
+                "enum": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "A",
+                  "B",
+                  "C"
+                ]
+              }
+            },
+            "required": ["MDEntryType"]
+          }
+        },
+        "NoRelatedSym": {
+          "type": "array",
+          "description": "Number of entries desired for Market Depth",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/instrument.json"
+          }
+        }
+      },
+      "required": [
+          "MDReqID",
+          "SubscriptionRequestType",
+          "MarketDepth",
+          "NoMDEntryTypes",
+          "NoRelatedSym"
+      ]
+    },
+    "Trailer": {
+      "$ref": "https://raw.githubusercontent.com/lowcarbontrade/fix-reference/main/trailer.json"
+    }
+  },
+  "required": [
+    "Header",
+    "Body",
+    "Trailer"
+  ]
+}
