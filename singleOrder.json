@@ -45,7 +45,7 @@
         "Price": {
           "type": "number",
           "description": "Price of a limit order",
-          "minimum": 0
+          "minimum": 0.1
         },
         "TimeInForce": {
           "type": "string",
