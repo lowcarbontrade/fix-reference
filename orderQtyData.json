@@ -8,7 +8,8 @@
             "properties": {
                 "OrderQty": {
                     "type": "integer",
-                    "description": "Number of shares ordered"
+                    "description": "Number of shares ordered",
+                    "minimum": 1
                 }
             },
             "required": [
@@ -20,7 +21,8 @@
             "properties": {
                 "CashOrderQty": {
                     "type": "integer",
-                    "description": "Cash order quantity"
+                    "description": "Cash order quantity",
+                    "minimum": 1
                 }
             },
             "required": [
